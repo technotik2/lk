@@ -1,0 +1,56 @@
+<body>
+<%- include partials/header.ejs %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include partials/main_nav.ejs %>
+
+<div id="container">
+<h4 style="padding-top: 10px;">My emails</h4>
+<img src="img\gmail.png" id="gmaillogo">
+<br/>
+<a href="mailto:peymanth27@gmail.com" style="margin-left: 3px; font-size: 14px;">peymanth27@gmail.com</a>
+<br/>
+<img src="img\outlook.png" id="gmaillogo">
+<br/>
+<a href="mailto:ptalkhek@mycentennialcollege.ca" style="margin-left: 3px; font-size: 14px;">ptalkhek@mycentennialcollege.ca</a>
+<br/>
+<div id="formcontainer">
+<div style="border: 1px black solid; border-radius: 10px; " id="formheader"><h4 style="padding: 10px;">Want me to contact you ? </h4></div>
+<form action="/" method="get">
+    <input type="text" class="forminp" name="fullname" placeholder="Full Name">
+    <br>
+    <input type="text" class="forminp" name="email" placeholder="Email"><br>
+    <input type="text" class="forminp" name="number" placeholder="Phone number">
+    <input type="text" class="forminp" name="message" placeholder="Message(300 words)" style="padding-bottom: 150px;">
+    <br>
+    <input type="submit" class="subbutton" id="btns" style="margin-top: 10px; " onclick="s()">
+
+</form>
+</div>
+</div>
+</body>
+<footer>
+
+    <nav class="navbar fixed-bottom navbar-dark">
+      <h6 class="navbar-text" href="#">&nbsp;&copy; All rights reserved @2022 </h6>
+    </nav>
+  </footer>
+<script>
+  //This scripts helps in validation user input
+  function s(){
+    var inputsq = document.getElementsByClassName("forminp").length;
+    for(var i=0;i<inputsq; i++){
+    var inps = document.getElementsByClassName("forminp")[i].value;
+    if(inps==""){
+      inps = document.getElementsByClassName("forminp")[i].focus();
+      alert("All fields should be filled");
+      return false;
+      
+
+    }
+  }
+  
+  }
+ 
+  
+</script>
+<%- include partials/footer.ejs %>

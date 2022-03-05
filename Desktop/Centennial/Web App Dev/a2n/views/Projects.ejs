@@ -1,0 +1,70 @@
+<body style="position: relative; height: auto; width: auto; margin: 0 auto;">
+    <%- include partials/header.ejs %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include partials/main_nav.ejs %>
+    <div class="proj">
+        <h4 style="margin:10px;">Bybit Level II Order Color Changer</h4>
+        <hr>
+        <img id="myImg" src="img\b.png" alt="Snow" style="width:100%;max-width:300px">
+        <p class="">This tool makes reading the tape much easier by changing the color of large orders.<br>
+            Reading the tape can be quite challenging especially with crypto exchanges as there is more automated trading involved but this extension makes it easier by calculating a sum of the last 70 orders and then divide it by 35 then whatever order that is larger than the so-said calculations will be highlighted in the recent trades window and it works, no matter how fast the tape is printing. 
+            This function has been around in stock trading platforms such as ThinkorSwim and TD Ameritrade, but no crypto exchange has this functionality. So this tool will surely enhance your technical analysis.</p>
+            <a style="width: 240px;" href="https://chrome.google.com/webstore/detail/bybit-level-ii-order-dete/pcikkbooljiofapjlodjhnldefhjaejf"><img src="img\webs.png" style="height: 80px;width:240px;"/></a>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+        </div>
+        <br>
+        <br>
+    </div>
+    <div class="proj" style="margin-bottom: 100px;">
+        <h4 style="margin:10px;">Binance Level II Order Color Changer(current project)</h4>
+        <hr>
+        <div><img id="myImg2" src="img\Binance.png" alt="Snow" style="width:100%;max-width:300px">
+        </div><p class="">This tool makes reading the tape much easier by changing the color of large orders.<br>
+            Reading the tape can be quite challenging especially with crypto exchanges as there is more automated trading involved but this extension makes it easier by calculating a sum of the last 100 orders and then divide it by 100 then whatever order that is larger than the so-said calculations will be highlighted in the recent trades window and it works, no matter how fast the tape is printing. 
+            This function has been around in stock trading platforms such as ThinkorSwim and TD Ameritrade, but no crypto exchange has this functionality. So this tool will surely enhance your technical analysis.</p>
+        <!-- The Modal -->
+        <div id="myModal2" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img02">
+        </div>
+        <br>
+    </div>
+<script>
+    // This scripts helps in opening the pictures in full size
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+    var modal = document.getElementById("myModal2");
+    var img = document.getElementById("myImg2");
+    var modalImg = document.getElementById("img02");
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    }
+    var span = document.getElementsByClassName("close")[1];
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+</script>
+</body>
+<footer>
+
+    <nav class="navbar fixed-bottom navbar-dark">
+      <h6 class="navbar-text" href="#">&nbsp;&copy; All rights reserved @2022 </h6>
+    </nav>
+  </footer>
